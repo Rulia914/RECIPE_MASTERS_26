@@ -10,7 +10,7 @@ $content = "Aucun contenu ne correspond à votre requête.";
 //    DB_HOST, DB_NAME, DB_USER, DB_PASSWORD
 
 
-define("DB_HOST", "localhost:3307");
+define("DB_HOST", "localhost:3306");
 define("DB_NAME", "recipe_master_26");
 define("DB_USER", "root");
 define("DB_PASSWORD", "");
