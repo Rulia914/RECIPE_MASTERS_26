@@ -3,10 +3,8 @@
 
 namespace App\Controllers\PagesController;
 
-
 use \PDO;
 use \App\Models\RecipesModel;
-
 
 function homeAction(PDO $connexion)
 {
