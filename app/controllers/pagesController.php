@@ -10,7 +10,7 @@ function homeAction(PDO $connexion)
 {
     include_once '../app/models/recipesModel.php';
     $randomRecipe = RecipesModel\findOneByRand($connexion);
-
+    $popularRecipes = RecipesModel\findAllPopulars($connexion);
 
     global $title, $content;
     $title = "Home";
@@ -18,3 +18,4 @@ function homeAction(PDO $connexion)
     include '../app/views/pages/home.php';
     $content = ob_get_clean();
 }
+

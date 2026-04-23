@@ -9,3 +9,8 @@ function findOneByRand(PDO $connexion) : array{
     return $rs->fetch(PDO::FETCH_ASSOC);
 
 }
+function findAllPopulars (PDO $connexion): array {
+    $sql ="SELECT * FROM recipes ORDER BY created_at DESC LIMIT 3;";
+    $rs=$connexion ->query($sql);
+    return $rs->fetchALL(PDO::FETCH_ASSOC);
+}
