@@ -24,4 +24,12 @@ function FindAllByUserId(PDO $connexion, int $userID)
     return $rs->fetchAll(PDO::FETCH_ASSOC);
 }
 //on prepare pcq il y a un paramètre (ID)
- 
+function findOneById (PDO $connexion, int $id)
+{
+    $sql='SELECT * FROM recipes WHERE id=:id ;';
+
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':id', $id, PDO::PARAM_INT);
+    $rs -> execute();
+    return $rs->fetch(PDO::FETCH_ASSOC);
+}
