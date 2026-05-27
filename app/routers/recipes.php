@@ -13,7 +13,7 @@ switch($_GET['recipes']):
 
     case 'show' : RecipesController\showAction($connexion, $_GET['id']);
         break;
-
+    case 'index' : RecipesController\indexAction($connexion);
     default : ;
 
 endswitch;
@@ -21,5 +21,5 @@ endswitch;
 
 //ROUTE POUR TOUTES LES RECETTES
 //PATTERN : /?recipes=index
-//CTRL :
-//ACTION :
+//CTRL : recipesController
+//ACTION : indexAction

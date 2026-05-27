@@ -33,3 +33,9 @@ function findOneById (PDO $connexion, int $id)
     $rs -> execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
 }
+function findAll(PDO $connexion){
+    $sql='SELECT * FROM recipes ORDER BY id ASC;';
+
+    $rs=$connexion ->query($sql);
+    return $rs->fetchALL(PDO::FETCH_ASSOC);
+}

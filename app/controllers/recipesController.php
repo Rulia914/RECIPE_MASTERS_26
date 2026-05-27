@@ -6,11 +6,22 @@ use \App\Models\RecipesModel;
 
 function showAction(PDO $connexion, int $id){
     include_once '../app/models/recipesModel.php';
-    $recipe = RecipesModel\findOneById($connexion, $id);
+    $recipe = \RecipesModel\findOneById($connexion, $id);
 
     global $title, $content;
     $title = $recipe['name'];
     ob_start();
     include '../app/views/recipes/show.php';
+    $content = ob_get_clean();
+}
+
+function indexAction(PDO $connexion){
+    include_once '../app/models/recipesModel.php';
+    $cardRecipes = \RecipesModel\findAll($connexion);
+
+    global $title, $content;
+    $title = 'Index des recettes';
+    ob_start();
+    include '../app/views/recipes/_index.php';
     $content = ob_get_clean();
 }
