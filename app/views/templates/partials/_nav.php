@@ -33,16 +33,14 @@
                     </button>
                 </div>
                 <div class="hidden md:flex items-center space-x-4">
-                    <input
-                        type="text"
-                        placeholder="Rechercher une recette..."
-                        class="p-2 rounded-md" />
+                    <?php include '../app/views/templates/partials/_search.php';?>
+                        
                     <a
                         class="text-white hover:text-yellow-500 px-3 py-2"
-                        href="recipes.html">Recettes</a>
+                        href="?recipes=index">Recettes</a>
                     <a
                         class="text-white hover:text-yellow-500 px-3 py-2"
-                        href="chefs.html">Chefs</a>
+                        href="?users=index">Chefs</a>
                 </div>
             </div>
         </div>
