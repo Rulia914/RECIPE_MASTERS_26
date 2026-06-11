@@ -6,7 +6,7 @@
                 <div class="flex items-center">
                     <a
                         class="text-white font-bold text-xl flex items-center"
-                        href="index.html">
+                        href="?home=1">
                         <i class="fas fa-utensils text-yellow-500 mr-2"></i> RECIPE
                         MASTER
                     </a>
@@ -45,12 +45,9 @@
             </div>
         </div>
         <div x-show="open" class="md:hidden bg-gray-700">
-            <input
-                type="text"
-                placeholder="Rechercher une recette..."
-                class="p-2 w-full" />
-            <a class="block text-white hover:text-yellow-500 px-3 py-2" href="#">Recettes</a>
-            <a class="block text-white hover:text-yellow-500 px-3 py-2" href="#">Chefs</a>
+        <?php include '../app/views/templates/partials/_search.php';?>
+            <a class="block text-white hover:text-yellow-500 px-3 py-2" href="?recipes=index">Recettes</a>
+            <a class="block text-white hover:text-yellow-500 px-3 py-2" href="?users=index">Chefs</a>
         </div>
     </nav>
 </div>

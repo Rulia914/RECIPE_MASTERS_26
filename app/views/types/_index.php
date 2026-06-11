@@ -11,7 +11,7 @@
             <li>
                 <a
                     class="hover:text-white hover:bg-yellow-600 px-2 block"
-                    href=""><?php echo $type['name'];?></a>
+                    href="?types=show&id=<?php echo (int) $type['id']; ?>"><?php echo $type['name'];?></a>
             </li>
             <?php endforeach;?>
         </ul>

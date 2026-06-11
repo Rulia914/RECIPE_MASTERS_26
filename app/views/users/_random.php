@@ -21,7 +21,7 @@
     <!-- User Actions -->
     <div class="flex justify-between items-center mb-4">
         <a
-            href="user_recipes.html"
+            href="?users=recipes&id=<?php echo (int) $randomUser['id']; ?>"
             class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-full px-6 py-2">Voir mes recettes</a>
     </div>
 

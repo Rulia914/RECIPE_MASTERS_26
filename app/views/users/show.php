@@ -1,10 +1,10 @@
 <?php
-/**@var array $users */;?>
+/** @var array $user */
+?>
 <section class="relative mb-6">
-  <?php foreach ($users as $user):?>
               <img
                 class="w-full h-96 object-cover"
-                src="<?php echo $user['picture'];?>"
+                src="pictures/<?php echo $user['picture']; ?>"
                 alt="<?php echo $user['name'];?>"
               />
               <div
@@ -17,7 +17,6 @@
                 <?php echo $user['biography'];?>
                 </p>
               </div> 
-              <?php endforeach ;?>
             </section>
             <!-- User's Recipes -->
             <section>

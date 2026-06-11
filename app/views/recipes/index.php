@@ -31,7 +31,7 @@
           <?php \Core\Helpers\truncate($recipe['description'], 50);?>
           </p>
           <a
-            href="?recipe=show&id=x"
+            href="?recipes=show&id=<?php echo (int) $recipe['id']; ?>"
             class="inline-block mt-4 bg-red-500 hover:bg-red-800 rounded-full px-4 py-2 text-white"
             >Voir la recette</a
           >

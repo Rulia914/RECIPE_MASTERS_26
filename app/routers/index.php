@@ -6,6 +6,17 @@ if(isset($_GET['recipes'])) :
 
 elseif (isset($_GET['users'])) :
     include_once '../app/routers/users.php';
+
+elseif (isset($_GET['ingredients'])) :
+    include_once '../app/routers/ingredients.php';
+
+elseif (isset($_GET['types'])) :
+    include_once '../app/routers/types.php';
+
+elseif (isset($_GET['home'])) :
+    include_once '../app/controllers/pagesController.php';
+    \App\Controllers\PagesController\homeAction($connexion);
+
 //ROUTE PAR DEFAUT
 //PATTERN : ?
 //CTRL : PagesController

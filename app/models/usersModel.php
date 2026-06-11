@@ -20,7 +20,7 @@ function findAll(PDO $connexion): array
     $rs = $connexion->query($sql);
     return $rs->fetchAll(PDO::FETCH_ASSOC);
 }
-function find(PDO $connexion, int $id): array
+function findOneById(PDO $connexion, int $id): array
 {
     $sql = "SELECT *
             FROM users

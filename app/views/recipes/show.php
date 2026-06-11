@@ -7,12 +7,12 @@
   <!-- Recipe Image -->
   <img
     class="w-full h-96 object-cover rounded-t-lg"
-    src="<?php echo $recipe['picture']?>"
-    alt="<?php echo $recipe['name']?>"
+    src="<?php echo $recipe['recipePicture']?>"
+    alt="<?php echo $recipe['recipeName']?>"
   />
   <!-- Recipe Info -->
   <div class="p-4">
-    <h1 class="text-3xl font-bold mb-4"><?php echo $recipe['name']?></h1>
+    <h1 class="text-3xl font-bold mb-4"><?php echo $recipe['recipeName']?></h1>
     <div class="flex items-center mb-4">
       <span class="text-yellow-500 mr-1"
         ><i class="fas fa-star"></i
@@ -37,10 +37,13 @@
   <div class="p-4 border-t">
     <h2 class="text-2xl font-bold mb-4">Ingrédients</h2>
     <ul class="list-disc pl-5">
-      <li>200g de farine</li>
-      <li>100g de sucre</li>
-      <li>3 œufs</li>
-      <!-- ... (autres ingrédients) ... -->
+      <?php foreach (($ingredients ?? []) as $ingredient): ?>
+        <li>
+          <a href="?ingredients=recipes&id=<?php echo (int)$ingredient['id']; ?>" class="text-red-500 hover:text-red-700">
+            <?php echo ($ingredient['quantity'] . ' ' . ($ingredient['unit'] ?: '') . ' ' . $ingredient['name']); ?>
+          </a>
+        </li>
+      <?php endforeach; ?>
     </ul>
   </div>
 

@@ -13,7 +13,10 @@ switch($_GET['recipes']):
 
     case 'show' : RecipesController\showAction($connexion, $_GET['id']);
         break;
-
+    case 'index' :
+        $search = $_GET['q'] ?? null;
+        RecipesController\indexAction($connexion, $search);
+        break;
     default : ;
 
 endswitch;
